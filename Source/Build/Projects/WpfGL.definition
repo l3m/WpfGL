@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Name="WpfGL" Path="WpfGL" Type="Library" Guid="C5E5CE18-FD55-46AC-BA8B-32579ABBB25E" Platforms="Windows">
+  <Properties>
+    <FrameworkVersions>
+      <Platform Name="Windows">
+        <Version>4.5</Version>
+      </Platform>
+    </FrameworkVersions>
+  </Properties>
+  <References>
+    <Reference Include="OpenTK">
+      <HintPath>..\packages\OpenTK.1.1.1508.5724\lib\NET40\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl">
+      <HintPath>..\packages\OpenTK.GLControl.1.1.1508.5724\lib\NET40\OpenTK.GLControl.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX, Version=2.5.0.0, Culture=neutral, PublicKeyToken=627a3d6d1956f55a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SharpDX.2.5.0\lib\net40\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D9">
+      <HintPath>..\packages\SharpDX.Direct3D9.2.5.0\lib\net40\SharpDX.Direct3D9.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="WindowsBase" />
+  </References>
+  <Files>
+    <Compile Include="Interop\AntialiasedPremultiplyAlphaWpfRenderTarget.cs" />
+    <Compile Include="Interop\AsyncReadbackWpfRenderTarget.cs" />
+    <Compile Include="Interop\IAsyncReadbackWpfRenderTarget.cs" />
+    <Compile Include="Interop\IImageInterop.cs" />
+    <Compile Include="Interop\ImageInterop.cs" />
+    <Compile Include="Interop\IWpfGLImage.cs" />
+    <Compile Include="Interop\IWpfOpenGLContext.cs" />
+    <Compile Include="Interop\IWpfPostProcessShaderSources.cs" />
+    <Compile Include="Interop\IWpfRenderTarget.cs" />
+    <Compile Include="Interop\PremultiplyAlphaWpfRenderTarget.cs" />
+    <Compile Include="Interop\WpfGLImage.cs" />
+    <Compile Include="Interop\WpfOpenGLContext.cs" />
+    <Compile Include="Interop\WpfPostProcessShaderSources.cs" />
+    <Compile Include="Interop\WriteableBitmapSource.cs" />
+    <Compile Include="OpenGL\IOpenGLContext.cs" />
+    <Compile Include="OpenGL\IShaderProgram.cs" />
+    <Compile Include="OpenGL\IShaderSources.cs" />
+    <Compile Include="OpenGL\ShaderProgram.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderer\Example.cs" />
+    <Compile Include="Renderer\ExampleShaderSources.cs" />
+    <Compile Include="Renderer\ExampleWithMultisampling.cs" />
+    <Compile Include="Renderer\IExampleShaderSources.cs" />
+    <Compile Include="Renderer\IRenderTimings.cs" />
+    <Compile Include="Renderer\IRenderToTexture.cs" />
+    <Compile Include="Renderer\RenderTimings.cs" />
+    <None Include="packages.config" />
+  </Files>
+</Project>

@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C5E5CE18-FD55-46AC-BA8B-32579ABBB25E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WpfGL</RootNamespace>
+    <AssemblyName>WpfGL</AssemblyName>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <TargetFrameworkVersion>4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\Debug</OutputPath>
+    <IntermediateOutputPath>obj\Debug</IntermediateOutputPath>
+    <DefineConstants>DEBUG;PLATFORM_WINDOWS;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\Release</OutputPath>
+    <IntermediateOutputPath>obj\Release</IntermediateOutputPath>
+    <DefineConstants>PLATFORM_WINDOWS;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OpenTK" />
+    <Reference Include="OpenTK.GLControl" />
+    <Reference Include="SharpDX, Version=2.5.0.0, Culture=neutral, PublicKeyToken=627a3d6d1956f55a, processorArchitecture=MSIL" />
+    <Reference Include="SharpDX.Direct3D9" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="OpenTK">
+      <HintPath>..\packages\OpenTK.1.1.1508.5724\lib\net40\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl">
+      <HintPath>..\packages\OpenTK.GLControl.1.1.1508.5724\lib\net40\OpenTK.GLControl.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interop\AntialiasedPremultiplyAlphaWpfRenderTarget.cs" />
+    <Compile Include="Interop\AsyncReadbackWpfRenderTarget.cs" />
+    <Compile Include="Interop\IAsyncReadbackWpfRenderTarget.cs" />
+    <Compile Include="Interop\IImageInterop.cs" />
+    <Compile Include="Interop\ImageInterop.cs" />
+    <Compile Include="Interop\IWpfGLImage.cs" />
+    <Compile Include="Interop\IWpfOpenGLContext.cs" />
+    <Compile Include="Interop\IWpfPostProcessShaderSources.cs" />
+    <Compile Include="Interop\IWpfRenderTarget.cs" />
+    <Compile Include="Interop\PremultiplyAlphaWpfRenderTarget.cs" />
+    <Compile Include="Interop\WpfGLImage.cs" />
+    <Compile Include="Interop\WpfOpenGLContext.cs" />
+    <Compile Include="Interop\WpfOpenGLInteropException.cs" />
+    <Compile Include="Interop\WpfPostProcessShaderSources.cs" />
+    <Compile Include="Interop\WriteableBitmapSource.cs" />
+    <Compile Include="OpenGL\IOpenGLContext.cs" />
+    <Compile Include="OpenGL\IShaderProgram.cs" />
+    <Compile Include="OpenGL\IShaderSources.cs" />
+    <Compile Include="OpenGL\OpenGLException.cs" />
+    <Compile Include="OpenGL\ShaderProgram.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderer\Example.cs" />
+    <Compile Include="Renderer\ExampleShaderSources.cs" />
+    <Compile Include="Renderer\ExampleWithMultisampling.cs" />
+    <Compile Include="Renderer\IExampleShaderSources.cs" />
+    <Compile Include="Renderer\IRenderTimes.cs" />
+    <Compile Include="Renderer\IRenderToTexture.cs" />
+    <Compile Include="Renderer\RenderTimes.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <ItemGroup />
+  <ItemGroup />
+  <ItemGroup />
+  <ItemGroup />
+  <ItemGroup />
+  <ItemGroup />
+  <ItemGroup />
+  <ItemGroup />
+  <ItemGroup />
+  <ItemGroup />
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup />
+</Project>
