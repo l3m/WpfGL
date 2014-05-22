@@ -134,20 +134,7 @@ namespace WpfGL.Interop
                 _reset_back_buffer = false;
             }
 
-            // CompositionTarget.Rendering event may be raised multiple times per frame
-            // (e.g. during window resizing).
-            var rendering_event_args = (RenderingEventArgs) event_args;
-            if (_last_rendering_time != rendering_event_args.RenderingTime || _reset_back_buffer)
-            {
-                _last_rendering_time = rendering_event_args.RenderingTime;
-
-                _image.RenderAndSample(RenderToTexture);
-            }
-            else
-            {
-                _image.MarkImageSourceAsDirty();
-            }
-
+            _image.RenderAndSample(RenderToTexture);
         }
 
 
